@@ -1,7 +1,5 @@
 class benchbox{
-  package {
-    ['git', 'vcsrepo']: ensure => 'installed',
-  }->
+
   vcsrepo { '/home/vagrant/doFoo':
     ensure   => present, # present
     provider => git,

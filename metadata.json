@@ -23,6 +23,11 @@
     {
       "name": "puppet",
       "version_requirement": "3.x"
+    },
+
+    {
+      "name": "git",
+      "version_requirement": "x.x"
     }
   ],
   "dependencies": [
