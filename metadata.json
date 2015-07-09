@@ -7,30 +7,5 @@
   "source": "https://github.com/2xl/2xl-benchbox",
   "project_page": "https://github.com/2xl/2xl-benchbox",
   "issues_url": "https://tickets.puppetlabs.com/browse/MODULES",
-  "operatingsystem_support": [
-    {
-      "operatingsystem": "Debian",
-      "operatingsystemrelease": [
-        "6",
-        "7",
-        "8"
-      ]
-    }
 
-  ],
-  "requirements": [
-
-    {
-      "name": "puppet",
-      "version_requirement": "3.x"
-    },
-
-    {
-      "name": "git",
-      "version_requirement": "x.x"
-    }
-  ],
-  "dependencies": [
-
-  ]
 }
