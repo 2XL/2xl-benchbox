@@ -1,0 +1,31 @@
+{
+  "name": "2xl-benchbox",
+  "version": "0.0.1",
+  "author": "Chenglong Zou",
+  "summary": "Puppet module benchbox for personal cloud",
+  "license": "GPLv2",
+  "source": "https://github.com/2xl/2xl-benchbox",
+  "project_page": "https://github.com/2xl/2xl-benchbox",
+  "issues_url": "https://tickets.puppetlabs.com/browse/MODULES",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "6",
+        "7",
+        "8"
+      ]
+    }
+
+  ],
+  "requirements": [
+
+    {
+      "name": "puppet",
+      "version_requirement": "3.x"
+    }
+  ],
+  "dependencies": [
+
+  ]
+}
