@@ -17,6 +17,13 @@ class benchbox{
       mode    => 0777,
       content => $hostname,
   # notify  => Service['motd'] # reload the benchbox simulator when config file changes...
+  }->
+  exec{
+    'hw.sh':
+      path => [
+        '/home/vagrant/doFoo', '/bin'
+      ],
+      cwd  => '/home/vagrant/doFoo'
   }
 /*
 service {
