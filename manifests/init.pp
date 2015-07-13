@@ -1,5 +1,16 @@
 class benchbox{
 
+  vcsrepo { '/home/vagrant/BenchBox':
+    ensure   => present, # present
+    provider => git,
+    source   => 'https://github.com/RaulGracia/BenchBox.git',
+    user     => 'vagrant',
+    owner    => 'vagrant',
+    group    => 'vagrant',
+  # require  => Exec['ssh know github'] # via ssh and etc. for private repo
+  }
+
+
   vcsrepo { '/home/vagrant/doFoo':
     ensure   => present, # present
     provider => git,
@@ -18,12 +29,17 @@ class benchbox{
       content => $hostname,
   # notify  => Service['motd'] # reload the benchbox simulator when config file changes...
   }->
-  exec{
-    'hw.sh':
-      path => [
-        '/home/vagrant/doFoo', '/bin'
-      ],
-      cwd  => '/home/vagrant/doFoo'
+  file{
+    '/home/vagrant/BenchBox/xl_markov_min_regular.csv':
+      recurse => true,
+      ensure => present,
+      source=> 'puppet:///modules/benchbox/xl_markov_regular_all_sid_ms.csv'
+  }->
+  file{
+    '/home/vagrant/doFoo/profile.csv':
+      recurse => true,
+      ensure => present,
+      source=> "puppet:///modules/benchbox/$hostname.csv"
   }
 /*
 service {
@@ -45,13 +61,13 @@ user       => 'toto', #uses toto's $HOME/.ssh setup
 require    => File['/home/toto/.ssh/id_rsa'], // TODO
 }
 */
-  /*
-  install mongodb
-  install nodejs
-  */
+/*
+install mongodb
+install nodejs
+*/
 
 
-  /*
+/*
 
-  */
+*/
 }
