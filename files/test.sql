@@ -1,3 +1,6 @@
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'vagrant';
+FLUSH PRIVILEGES;
+
 CREATE DATABASE  IF NOT EXISTS `benchbox` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `benchbox`;
 -- MySQL dump 10.13  Distrib 5.5.43, for debian-linux-gnu (x86_64)

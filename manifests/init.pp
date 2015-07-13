@@ -33,13 +33,18 @@ class benchbox{
     '/home/vagrant/BenchBox/xl_markov_min_regular.csv':
       recurse => true,
       ensure => present,
-      source=> 'puppet:///modules/benchbox/xl_markov_regular_all_sid_ms.csv'
+      source=> 'puppet:///modules/benchbox/chain/xl_markov_regular_all_sid_ms.csv'
   }->
   file{
     '/home/vagrant/doFoo/profile.csv':
       recurse => true,
       ensure => present,
-      source=> "puppet:///modules/benchbox/$hostname.csv"
+      source=> "puppet:///modules/benchbox/conf/$hostname.csv"
+  }
+
+  host {
+    'master.com':
+      ip=> '192.168.0.40'
   }
 /*
 service {
