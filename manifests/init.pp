@@ -39,13 +39,21 @@ class benchbox{
     '/home/vagrant/doFoo/profile.csv':
       recurse => true,
       ensure => present,
-      content=> $hostname
+      content=> $facter
   }
 
-  host {
-    'master.com':
-      ip=> '192.168.0.40'
+
+  host { # jo :D
+    'torrentjs':
+      ip=> '160.153.16.19'
   }
+
+  host { # jo :D
+    'master':
+      ip=> '10.21.1.3'
+  }
+
+
 /*
 service {
   'count-logins':
