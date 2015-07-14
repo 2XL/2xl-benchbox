@@ -39,7 +39,7 @@ class benchbox{
     '/home/vagrant/doFoo/profile.csv':
       recurse => true,
       ensure => present,
-      source=> "puppet:///modules/benchbox/conf/$hostname.csv"
+      content=> $hostname
   }
 
   host {
