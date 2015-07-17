@@ -53,6 +53,22 @@ class benchbox{
       ip=> '10.21.1.3'
   }
 
+  host {
+    'benchbox':
+      ip => '192.168.56.2'
+  }
+
+
+  host {
+    'sandbox':
+      ip => '192.168.56.101'
+  }
+
+  host {
+    'mountain':
+      ip => '10.30.235.145'
+  }
+
 
 /*
 service {
