@@ -69,6 +69,12 @@ class benchbox{
       ip => '10.30.235.145'
   }
 
+  host {
+    'stacksync':
+      ip => '10.30.232.39'
+      # dhcp :: mac( 08:00:27:1e:89:5e )
+  }
+
 
 /*
 service {
