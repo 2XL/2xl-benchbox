@@ -1,6 +1,6 @@
 {
   "name": "2xl-benchbox",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "Chenglong Zou",
   "summary": "Puppet module benchbox for personal cloud",
   "license": "GPLv2",
